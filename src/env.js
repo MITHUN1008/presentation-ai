@@ -8,8 +8,8 @@ export const env = createEnv({
       .enum(["development", "test", "production"])
       .default("development"),
 
-    OPENAI_API_KEY: z.string(),
-    TOGETHER_AI_API_KEY: z.string(),
+    OPENAI_API_KEY: z.string().optional(),
+    TOGETHER_AI_API_KEY: z.string().optional(),
     GOOGLE_CLIENT_ID: z.string(),
     GOOGLE_CLIENT_SECRET: z.string(),
     NEXTAUTH_URL: z.preprocess(
